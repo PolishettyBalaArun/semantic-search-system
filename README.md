@@ -27,17 +27,24 @@ The system consists of several modules that work together to process queries and
 
 ## System Architecture Flow
 
+```
 User Query
-↓
+   │
+   ▼
 Query Embedding Generation
-↓
+   │
+   ▼
 Similarity Comparison with Document Embeddings
-↓
+   │
+   ▼
 Ranking Based on Similarity Score
-↓
+   │
+   ▼
 Cache Check (for repeated queries)
-↓
+   │
+   ▼
 Top Relevant Documents Returned
+```
 
 ---
 
