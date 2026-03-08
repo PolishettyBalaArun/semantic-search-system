@@ -1,13 +1,13 @@
 # Semantic Search System
 
-A Python-based semantic search system that retrieves the most relevant documents based on **meaning (semantic similarity)** rather than exact keyword matches.
+A Python-based semantic search system that retrieves the most relevant documents based on **meaning and context** instead of simple keyword matching.
 
 ---
 
 # Project Overview
 
-Traditional keyword search only matches exact words.
-This project implements a **semantic search system** that understands the meaning of the query and finds documents with similar context using **text embeddings and similarity scoring**.
+Traditional search systems rely on keyword matching, which may fail to capture the true meaning of a query.
+This project implements a **semantic search system** that uses **text embeddings and similarity scoring** to find documents that are contextually similar to the user query.
 
 ---
 
@@ -17,13 +17,13 @@ This project implements a **semantic search system** that understands the meanin
 * Text embeddings for meaning-based retrieval
 * Cosine similarity ranking
 * Query result caching for faster responses
-* Modular Python implementation
+* Modular and easy-to-understand Python implementation
 
 ---
 
 # Architecture
 
-The system is divided into several components that work together to perform semantic search.
+The system consists of several modules that work together to process queries and retrieve relevant documents.
 
 ## System Architecture Flow
 
@@ -43,6 +43,7 @@ Top Relevant Documents Returned
 
 # Project Structure
 
+```
 semantic-search-system
 │
 ├── main.py
@@ -51,25 +52,28 @@ semantic-search-system
 ├── cache.py
 ├── requirements.txt
 └── README.md
+```
 
-### File Description
+---
 
-**main.py**
+# File Description
 
-Main entry point of the project.
-Handles user input and coordinates the search workflow.
+### main.py
 
-**embeddings.py**
+The main entry point of the application.
+Handles user queries and coordinates the search workflow.
 
-Responsible for converting text documents and queries into **vector embeddings**.
+### embeddings.py
 
-**clustering.py**
+Responsible for converting documents and queries into **vector embeddings**.
+
+### clustering.py
 
 Groups similar documents together to improve organization and scalability.
 
-**cache.py**
+### cache.py
 
-Stores previous search results to improve performance for repeated queries.
+Stores previously searched queries and results to improve performance.
 
 ---
 
@@ -85,19 +89,19 @@ The user enters a natural language search query.
 
 ### Step 3 – Query Embedding
 
-The query is converted into a vector embedding.
+The query is converted into a vector embedding using the embedding model.
 
 ### Step 4 – Similarity Calculation
 
-The system compares the query embedding with document embeddings using **cosine similarity**.
+The query embedding is compared with document embeddings using **cosine similarity**.
 
 ### Step 5 – Ranking
 
-Documents are ranked according to similarity scores.
+Documents are ranked based on similarity scores.
 
 ### Step 6 – Caching
 
-If the query was previously searched, results are retrieved from cache to improve speed.
+If the query has been searched before, the system retrieves results from the cache instead of recomputing.
 
 ### Step 7 – Result Output
 
@@ -107,15 +111,15 @@ The system returns the most relevant documents to the user.
 
 # Installation
 
-Clone the repository:
+Clone the repository
 
 git clone https://github.com/PolishettyBalaArun/semantic-search-system.git
 
-Navigate to the project directory:
+Navigate to the project directory
 
 cd semantic-search-system
 
-Install dependencies:
+Install required dependencies
 
 pip install -r requirements.txt
 
@@ -129,9 +133,9 @@ python main.py
 
 # Future Improvements
 
-* Integrate vector databases like FAISS
-* Add a web interface for search
-* Improve ranking with hybrid search techniques
+* Integrate vector databases such as FAISS
+* Build a web interface for easier interaction
+* Improve ranking using hybrid search methods
 * Support larger document collections
 
 ---
